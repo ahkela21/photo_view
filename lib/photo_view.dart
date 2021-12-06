@@ -486,7 +486,12 @@ class _PhotoViewState extends State<PhotoView>
   }
 
   @override
+  bool get wantKeepAlive => widget.wantKeepAlive;
+
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
+
     return LayoutBuilder(
       builder: (
         BuildContext context,
@@ -550,9 +555,6 @@ class _PhotoViewState extends State<PhotoView>
       },
     );
   }
-
-  @override
-  bool get wantKeepAlive => widget.wantKeepAlive;
 }
 
 /// The default [ScaleStateCycle]
